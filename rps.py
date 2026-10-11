@@ -251,7 +251,7 @@ def get_menu_choice():
             print("Invalid menu choice")
 
 def get_move(player_name):
-    """Prompts a players for a move and defaults to rock if invalid."""
+    """Prompts a player for a move and defaults to rock if invalid."""
     move = input(f"{player_name}, enter your move: ")
 
     if not is_move(move):
@@ -260,6 +260,15 @@ def get_move(player_name):
 
     return move
 
+def is_round_winner(move, opponent_move):
+    """Checks whether a move beats the opponent's move."""
+    move = move.lower()
+    opponent_move = opponent_move.lower()
+
+    return ((move == ROCK and opponent_move == SCISSORS)
+            or (move == PAPER and opponent_move == ROCK)
+            or (move == SCISSORS and opponent_move == PAPER))
+            
 def is_move_good(move):
     """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),

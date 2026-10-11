@@ -205,7 +205,40 @@ QUIT_CHOICE = 3
 #              or PLAY_RPSLS for rock, paper, scissors, lizard, spock
 # Returns:     the winner's name as a string, or "" for no winner
 # Prompt:      Under Construction
+def do_game(p1_name, p2_name, game_type):
+    """PLays three rounds and returns the overall winner's name."""
 
+    if game_type == PLAY_RPSLS:
+        print("Under Construction")
+        return ""
+
+    p1_wins = 0
+    p2_wins = 0
+
+    for round_number in range(MAX_ROUNDS):
+        print()
+        print(f"Round {round_number + 1} of {MAX_ROUNDS}")
+
+        result = do_round(p1_name, p2_name)
+
+        if result == PLAYER_1:
+            p1_wins += 1
+            announce_round_winner(p1_name)
+        elif result == PLAYER_2:
+            p2_wins += 1
+            announce_round_winner(p2_name)
+        else:
+            announce_round_winner("")
+
+    if p1_wins > p2_wins:
+        winner_name = p1_name
+    elif p2_wins > p1_wins:
+        winner_name = p2_name
+    else:
+        winner_name = ""
+
+    announce_winner(winner_name)
+    return winner_name
 
 def rps():
     """

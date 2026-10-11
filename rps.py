@@ -219,16 +219,17 @@ def rps():
 # Add all function implementations below this line.
 # We have started is_move_good() for you.
 # ***********************************************************************
-
+def get_name(player_number):
+    """Prompts a players for thier name and uses a default if empty."""
+    player_name = input(
+        f"player {players_number}, enter your name: "
+    )
+    
 def is_move_good(move):
-    """ Checks whether a move in valid. """
+    """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),
                     PAPER, PAPER.upper(),
                     SCISSORS, SCISSORS.upper())
-
-    # NOTE: replace this return statement!!!
-    return True
-
 
 # ***********************************************************************
 # DO NOT modify the four functions below.

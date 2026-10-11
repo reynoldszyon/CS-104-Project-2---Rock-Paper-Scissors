@@ -268,12 +268,19 @@ def is_round_winner(move, opponent_move):
     return ((move == ROCK and opponent_move == SCISSORS)
             or (move == PAPER and opponent_move == ROCK)
             or (move == SCISSORS and opponent_move == PAPER))
-            
+
 def is_move_good(move):
     """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),
                     PAPER, PAPER.upper(),
                     SCISSORS, SCISSORS.upper())
+
+def announce_round_winner(winner_name):
+    """Prints the winner of a round of announces a draw."""
+    if winner_name == "":
+        print("This round is a draw!")
+    else:
+        print(f"{winner_name} wins the round!")
 
 # ***********************************************************************
 # DO NOT modify the four functions below.

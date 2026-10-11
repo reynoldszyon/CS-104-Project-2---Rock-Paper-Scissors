@@ -282,6 +282,18 @@ def announce_round_winner(winner_name):
     else:
         print(f"{winner_name} wins the round!")
 
+def do_round(p1_name, p2_name):
+    """Get both players' moves and returns the round result."""
+    p1_move = get_move(p1_name)
+    p2_move = get_move(p2_name)
+
+    if p1_move.lower() == p2_move.lower():
+        return DRAW
+    elif is_round_winner(p1_move, p2_move):
+        return PLAYER_1
+    else:
+        return PLAYER_2
+
 # ***********************************************************************
 # DO NOT modify the four functions below.
 # ***********************************************************************

@@ -9,7 +9,8 @@ Name: Zy'on Reynolds
 CS 104: Project 2
 FALL 2026
 
-Description: A two-player rock, paper, scissors game played in the terminal. Players will compete for three rounds to determine the winner.
+Description: A two-player rock, paper, scissors game played in the terminal. Player socmpete for three rounds to determine the winner.
+"""
 
 # ***********************************************************************
 # Constants. Global constants are fine. Global variables are not.

@@ -222,7 +222,9 @@ def rps():
 
 def is_move_good(move):
     """ Checks whether a move in valid. """
-    # TODO: implement
+    return move in (ROCK, ROCK.upper(),
+                    PAPER, PAPER.upper(),
+                    SCISSORS, SCISSORS.upper())
 
     # NOTE: replace this return statement!!!
     return True

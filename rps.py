@@ -244,8 +244,20 @@ def rps():
     """
     Purpose: Runs the whole program. Write this function LAST.
     """
-    # TODO: implement
-    pass
+    print_initial_header()
+
+    p1_name = get_name(PLAYER_1)
+    p2_name = get_name(PLAYER_2)
+
+    while True:
+        game_type = get_menu_choice()
+
+        if game_type == QUIT_CHOICE:
+            break
+
+        winner_name = do_game(p1_name, p2_name, game_type)
+
+    print_closer()
 
 
 # ***********************************************************************

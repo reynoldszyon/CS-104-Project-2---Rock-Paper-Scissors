@@ -221,7 +221,7 @@ def rps():
 # ***********************************************************************
 
 def is_move_good(move):
-    """TO FILL IN: describe what this function does in one line."""
+    """ Checks whether a move in valid. """
     # TODO: implement
 
     # NOTE: replace this return statement!!!

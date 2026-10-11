@@ -222,7 +222,7 @@ def rps():
 def get_name(player_number):
     """Prompts a players for thier name and uses a default if empty."""
     player_name = input(
-        f"player {players_number}, enter your name: "
+        f"player {player_number}, enter your name: "
     )
 
     if player_name == "":
@@ -235,6 +235,21 @@ def get_name(player_number):
         
     return player_name
 
+def get_menu_choice():
+    """Displays the menu and returns a valid choice."""
+    while True:
+        print_menu()
+        choice = input("Choice --> ")
+
+        if choice == str(PLAY_RPS):
+            return PLAY_RPS
+        elif choice == str(PLAY_RPSLS):
+            return PLAY_RPSLS
+        elif choice == str(QUIT_CHOICE):
+            return QUIT_CHOICE
+        else:
+            print("Invalid menu choice")
+            
 def is_move_good(move):
     """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),

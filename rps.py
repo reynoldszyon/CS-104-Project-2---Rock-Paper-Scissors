@@ -4,13 +4,12 @@ rps.py
 Redistributed and modified with permission from the
 EECS Department at The University of Michigan, Ann Arbor
 
-Name: TO FILL IN (your name)
+Name: Zy'on Reynolds
 
 CS 104: Project 2
 FALL 2026
 
-Description: TO FILL IN (one or two sentences about what this program does)
-"""
+Description: A two-player rock, paper, scissors game played in the terminal. Players will compete for three rounds to determine the winner.
 
 # ***********************************************************************
 # Constants. Global constants are fine. Global variables are not.

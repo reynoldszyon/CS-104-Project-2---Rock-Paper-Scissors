@@ -249,7 +249,17 @@ def get_menu_choice():
             return QUIT_CHOICE
         else:
             print("Invalid menu choice")
-            
+
+def get_move(player_name):
+    """Prompts a players for a move and defaults to rock if invalid."""
+    move = input(f"{player_name}, enter your move: ")
+
+    if not is_move(move):
+        print_error_message(ERROR_MOVE)
+        move = DEFAULT_MOVE
+
+    return move
+
 def is_move_good(move):
     """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),

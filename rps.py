@@ -224,7 +224,17 @@ def get_name(player_number):
     player_name = input(
         f"player {players_number}, enter your name: "
     )
-    
+
+    if player_name == "":
+        print_error_message(ERROR_NAME)
+
+        if player_number == PLAYER_!:
+            player_name = DEFAULT_NAME_1
+        else:
+            player_name = DEFAULT_NAME_2
+        
+    return player_name
+
 def is_move_good(move):
     """ Checks whether a move in valid."""
     return move in (ROCK, ROCK.upper(),

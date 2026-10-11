@@ -294,6 +294,14 @@ def do_round(p1_name, p2_name):
     else:
         return PLAYER_2
 
+def announce_winner(winner_name):
+    """Announces the overall winner of the game."""
+    if winner_name == "":
+        print("No winner!")
+    else:
+        print(f"Congratulations {winner_name}!")
+        print(f"You won {COURSE_NAME} Rock, Paper, Scissors!")
+
 # ***********************************************************************
 # DO NOT modify the four functions below.
 # ***********************************************************************
